@@ -2,19 +2,19 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Accueil</title>
+    <title>nomDuSite | Contact</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header class="site-header">
+    <header class="site-header-small">
         <div class="container">
-            <img class="logo" src="images/logo.png" alt="logo">
+            <img class="site-header_logo" src="images/logo.png" alt="logo">
 
-            <nav id="menu-principal">
-                <!-- Menu -->
+            <nav class="site-header_nav">
+                <!-- Menu Principal -->
                 <ul>
                     <li><a href="index.html">ACCUEIL</a></li>
                     <li><a href="services.html">NOS SERVICES</a></li>
@@ -22,15 +22,76 @@
                     <li><a href="studio.html">STUDIO</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="actus.html">ACTUS</a></li>
+                    <li><a href="">BOUTIQUE CRėa</a></li>
                 </ul>
-                        
             </nav>
+
+            <h1 class="site-header_title" >CONTACTEZ-NOUS</h1>
+            <div class="site-header_subtitle">"Pour élaborer votre projet autour d'un café"</div>
         </div>
     </header>
     
-   
-  
- 
+    <section id="contact">
+        <div class="container">
+           <div id="contact-bloc">
+                <h2>Contact</h2>
+                <div class="subtitle">Vous avez une question, un projet, un besoin de partenariat...</div>
+            <p>N'hésitez pas as nous contactez!Nous ferons tout notre possible pour vous répondre dans les plus brefs délais.</p>
+            </div>
+            
+       <div class="bloc-flex">  
+            <div class="bloc1">
+               <div class="bulle-message">
+                   <p>A votre écoute</p>
+                <!-- Background : bulle-message.png -->
+               </div>
+                
+                <address>
+            Germaine<br>
+            Responsable studio<br>
+            Fixe. 03 25 xx xx xx<br>
+            Port. 06 67 81 00 00<br>
+            Mail. contact@pressekiwee.com
+            </address>
+
+            </div>
+            <div class="bloc2">
+                <!-- Formulaire 
+          
+          liseret haut? A faire ?
+          
+            -->
+
+                <form action="" class="contact-form">
+                    <div class="bloc-flex">              <!-- FLEXBOX-->
+
+                        <div class="col50"><!-- colonne 1-->
+                            <label for="nom">Nom / Société<input type="text" name="nom" id="nom"></label>
+                            <label for="prenom">Prénom<input type="text" name="prenom" id="prenom"></label>
+                        </div>
+
+                        <div class="col50"><!-- colonne 2-->
+                            <label for="tel">Téléphone<input type="text" name="tel" id="tel"></label>
+                            <label for="mail">Mail<input type="text" name="mail" id="mail"></label>
+                        </div>
+                    
+                    
+                        <label for="message" class="full">Message</label>
+                        <textarea name="message" class="full">The cat was playing in the garden.</textarea>
+
+                        
+                    </div>
+                    <input type="submit" id="btn" value="ENVOYER">
+                </form>
+
+
+            </div>
+            </div>  
+        </div>
+    </section>
+
+
+
 
 
 

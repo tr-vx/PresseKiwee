@@ -1,3 +1,5 @@
+/* --- Balises HTML --- */
+
 * {
     box-sizing: border-box;
 }
@@ -7,11 +9,11 @@ body {
     font-family: "Open Sans";
     color: black;
     background: #ededed;
-    font-size: 13pt;
+    font-size: 11pt;
 }
 
 a {
-    font-size:10pt;
+    font-size: 10pt;
     text-decoration: none;
 }
 
@@ -24,56 +26,80 @@ h4 {
     font-weight: bold;
     color: #202020;
 }
-h1{font-size:20pt};
-h2{font-size:}
+
+h1 {
+    font-size: 20pt
+}
+
+;
+h2 {
+    font-size:
+}
+
+img {}
+
+/* --- CLASSES UTILES --- */
 
 .puce {
-   display : block;
-   width : 2px;
-   height : 2px;
-   background-color : #202020;
-   }
-
-/* CLASSES RAPIDES  */
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: #202020;
+}
 
 .text-vert {
     color: #28b203;
 }
-article > h3{
-    margin-top:0;
-    margin-bottom:20px;
+
+article > h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
 }
+
 .subtitle {
-    display:inline;
+    display: inline;
     color: grey;
     font-style: italic;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 .bg-gris {
     background: lightgrey;
 }
 
+.container {
+    position: relative;
+    margin: auto;
+    width: 1025px;
+    height: auto;
+}
+
+.bord-dessous {
+    border-bottom: 1px solid lightgray;
+}
+
 /* ____________ En tête de la page _______________________        */
 
 .site-header {
-    position:relative;
-    background: #202020;
-    height: 500px;
+    background: linear-gradient(90deg, rgba(32, 32, 32, 0.7) 30%, rgba(32, 32, 32, 0.7) 80%), url(../images/bg-accueil.jpg)no-repeat, rgba(32, 32, 32, 0.9);
+    background-size: cover;
+    height: 600px;
     padding-top: 20px;
 }
+
 .site-header-small {
-    background: 
-        linear-gradient(90deg, rgba(32, 32, 32, 0.9) 30% , rgba(32, 32, 32, 1) 80% ), url(../images/bg-header.png)no-repeat, rgba(32, 32, 32, 1);
-    background-size: contain;  /* image = 323x661 */
+    background: linear-gradient(90deg, rgba(32, 32, 32, 0.9) 30%, rgba(32, 32, 32, 1) 80%), url(../images/bg-header.png)no-repeat, rgba(32, 32, 32, 1);
+    background-size: contain;
+    /* image = 323x661 */
     height: 300px;
     padding-top: 20px;
-    padding-bottom:20px;
+    padding-bottom: 20px;
 }
+
 .site-header_logo {
-    position:absolute;
-    display:inline-block;
+    position: absolute;
+    display: inline-block;
     height: 230px;
 }
 
@@ -84,53 +110,40 @@ article > h3{
 .site-header_nav ul li {
     list-style: none;
     float: left;
-    margin: 10px
+    margin: 10px;
 }
 
 .site-header_nav > ul > li > a {
     text-decoration: none;
     color: white;
+    text-transform: uppercase;
 }
 
 .site-header_title {
-    position:relative;
-    left:220px;
-    top:150px;
-    margin:0;
-    
-    font-style: italic;
-    font-weight:400;
+    position: absolute;
+    left: 340px;
+    top: 150px;
+
+
+    font-weight: 400;
     color: #28b203;
-    text-transform : uppercase;
-    text-align:center;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .site-header_subtitle {
-    width:600px;
-    position:absolute;
-    top:180px;
-    left:400px;
-    
-    font-size:18pt;
+    width: 600px;
+    position: absolute;
+    top: 190px;
+    left: 500px;
+
+    font-size: 18pt;
     color: #C0a477;
     font-style: italic;
     font-weight: 400;
 }
 
-/*---------------------------------------- */
-
-#services h3:before{
-    content:"• ";
-    top:5px;
-    width:20px;
-    font-size:20pt;
-}
-.container {
-    position: relative;
-    margin: auto;
-    width: 1025px;
-    height: auto;
-}
+/*----------------------------------Page ACCUEIL / INDEX ------ */
 
 #mission {
     margin-top: 40px;
@@ -168,9 +181,7 @@ article > h3{
     margin-bottom: 50px;
 }
 
-section {
-    border-bottom: 1px solid lightgrey;
-}
+
 
 #section2 {
     margin-bottom: 150px;
@@ -196,32 +207,348 @@ section {
     width: 200px;
     height: auto;
 }
+
+/* ------------------------------------- Page projets  */
+
+#projets nav {
+    height: 50px;
+    width: 100%;
+}
+
+#projets nav > ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#projets nav > ul > li {
+    list-style: none;
+}
+
+#projets nav > ul > li > a {
+    text-decoration: none;
+    color: #202020;
+    text-transform: uppercase;
+}
+
+
+/* -------  Liste de cartes - projets------ */
+
+.liste-de-cartes {
+    display: flex;
+    flex-flow: column wrap;
+
+    width: 100%;
+    /* modifiable */
+    max-height: 5000px;
+    /* modifiable */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carte {
+    position: relative;
+    flex: 1 1 auto;
+    /* 1 = etirable  */
+    width: 50%;
+    min-height: 100px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    border-radius: 3px;
+}
+
+.carte > * {
+    flex: 1 0 auto;
+}
+
+.carte > .carte-img {
+    align-self: space-between;
+    width: 70%;
+    height: auto;
+    margin: 9px;
+    border-radius: 3px;
+}
+
+.carte > .carte-description {
+    position: absolute;
+    display: none;
+    left: 20px;
+    bottom: 20px;
+    width: auto;
+    padding: 5px;
+    transition: all .7s ease-out;
+}
+
+/* Au survol d'une carte */
+
+.carte:hover {
+
+
+}
+
+.carte:hover > img.carte-img {
+    filter: brightness(1);
+    /* 0.4 foncé l'image */
+    opacity:0.4;
+    transition: all .7s ease;
+
+}
+
+.carte:hover > .carte-description {
+    display: block;
+    color: black;
+    background: rgba(255,255,255,0.8);
+
+}
+.carte-description > *{
+    font-style: italic;
+}
+.carte-description > p strong:first-child{
+    color:orange;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
 /*z------------------------------------- page services */
-section#services{margin-bottom:200px}
-.container-articles{
-    display:flex;
-    flex-flow: row wrap; 
+
+section#services {
+    margin-bottom: 200px
 }
-.article-grand{
-    padding:50px 50px 50px 50px;
+
+#services h3:before {
+    content: "• ";
+    top: 5px;
+    width: 20px;
+    font-size: 20pt;
 }
-.article-moyen{
-    flex:0 0 50%;
-    padding:50px;
+
+.container-articles {
+    display: flex;
+    flex-flow: row wrap;
 }
-.article-petit{
-    flex:0 0 25%;
-    padding:20px;
+
+.article-grand {
+    padding: 50px 50px 50px 50px;
 }
-.col-2{
-    display:flex;
-    flex-flow:column wrap;
+
+.article-moyen {
+    flex: 0 0 50%;
+    padding: 50px;
 }
+
+.article-petit {
+    flex: 0 0 25%;
+    padding: 20px;
+}
+
+
+
 /* ---------------- -------------------------- */
-/*z------------------------------------- page studio */
-.liseret-hb{border-top:1px solid grey;
-border-bottom:1px solid grey;margin:20px;}
-/*z-------------------------------------  */
+
+/*z------------------------------------- page STUDIO */
+
+.bloc-hauteur-fix {
+    /* 400PX */
+    height: auto;
+    max-height: 400px;
+}
+
+.bloc-hauteur-fix > * {
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section#studio {
+    margin-bottom: 200px;
+}
+
+.col-2 {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.liseret-hb {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-top: 40px;
+    padding-left: 80px;
+
+}
+
+#studio h3 {
+    margin-bottom: 5px;
+}
+
+/* ------------------------------------ Page CONTACT --------------- */
+
+#contact {
+    margin-top: 50px;
+    margin-bottom: 180px;
+}
+
+#contact .bloc1,
+#contact .bloc2 {
+    padding: 30px;
+}
+
+.bloc1 {
+    display: inline-block;
+    width: 33%;
+
+}
+
+#contact-bloc {
+    margin-left: 34%;
+    display: inline-block;
+    width: 50%;
+    padding: 30px;
+}
+
+#contact-bloc:after {
+    /* liseret de separation qui sort du cadre */
+    position: absolute;
+    content: "";
+    width: 66%;
+    border-bottom: 1px solid black;
+
+}
+
+#contact-bloc .subtitle,
+.contact-bloc h2 {
+    color: #28b203;
+}
+
+.bloc2 {
+    display: inline-block;
+    width: 66%;
+
+}
+
+.contact-form {
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+.contact-form label {
+    border-bottom: 1px solid black;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.bloc-flex {
+    display: flex;
+    flex-flow: row wrap;
+    ;
+    justify-content: space-around;
+}
+
+.bloc-flex > div.col50 > label {
+    width: 100%;
+    margin-left: 1%;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.bloc-flex > div.col50 > label > input {
+    flex: 1 1 auto;
+}
+
+.bloc-flex > div.col50 {
+    width: 48%;
+}
+
+label.full,
+textarea.full {
+    min-width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+input,
+textarea {
+    margin-left: 5px;
+    border: none;
+    background: #f0f0f0;
+    color: #202020;
+
+}
+
+textarea {
+    border-bottom: 1px #202020 solid;
+}
+
+input[type=submit] {
+    color: white;
+    margin-left: 87%;
+    padding: 5px 10px 5px 10px;
+    background: #202020;
+
+}
+
+#btn {
+    margin-top: 10px;
+    border: 1px solid grey;
+}
+
+.bulle-message {
+    font-size: 16pt;
+    height: 140px;
+    background: url(../images/bulle-message.png)no-repeat;
+    background-size: contain;
+    padding: 10px 0px 0px 70px;
+    font-style: italic;
+    color: #28b203;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------ page ACTUS ------------   */
+
+.site-header-actus {
+    background: linear-gradient(90deg, rgba(32, 32, 32, 0.7) 30%, rgba(32, 32, 32, 0.7) 80%), url(../images/bg-actus.png)no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
+    /* image = 323x661 */
+    height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#actus {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#actus > .container > figure {
+    width: 66%;
+    margin: 40px 0 40px 0;
+    margin-left: 0;
+
+
+}
+
+#actus img {
+    background: linear-gradient(90deg, rgba(32, 32, 32, 0.7) 30%, rgba(32, 32, 32, 0.7) 80%);
+    width: 100%;
+    height: auto;
+    filter: brightness(0.8);
+    box-shadow: 5px 5px 30px rgba(32, 32, 32, 0.1);
+}
+
+#actus img:hover {
+    filter: brightness(1);
+    box-shadow: 10px 10px 60px rgba(32, 32, 32, 0.4);
+}
+
+
+/*z--------------------------FOOTER -----------  */
 
 footer {
     padding-top: 50px;
@@ -270,7 +597,8 @@ footer a {
     text-align: center;
     margin-bottom: 5px;
 }
-.copyright >a{
+
+.copyright > a {
     font-size: 8pt;
 }
 
