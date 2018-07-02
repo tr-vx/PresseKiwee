@@ -2,32 +2,36 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>nomDuSite | Projets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PresseKiwee | Nos projets</title>
+    
+    <!--  Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header class="site-header-small">
+    <header class="page-header-small"><!-- page-header-small/large/medium-->
         <div class="container">
-            <img class="site-header_logo" src="images/logo.png" alt="logo">
+            <img class="page-header__logo" src="images/logo.png" alt="logo">
 
-            <nav class="site-header_nav">
+            <nav class="page-header__nav ">
                 <!-- Menu Principal -->
-                <ul>
-                    <li><a href="index.html">ACCUEIL</a></li>
-                    <li><a href="services.html">NOS SERVICES</a></li>
-                    <li><a href="projets.html">PROJETS</a></li>
-                    <li><a href="studio.html">STUDIO</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="actus.html">ACTUS</a></li>
-                    <li><a href="">BOUTIQUE CRėa</a></li>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="index.html">ACCUEIL</a></li>
+                    <li class="menu__item"><a class="menu__link" href="services.html">NOS SERVICES</a></li>
+                    <li class="menu__item"><a class="menu__link" href="projets.html">PROJETS</a></li>
+                    <li class="menu__item"><a class="menu__link" href="studio.html">STUDIO</a></li>
+                    <li class="menu__item"><a class="menu__link" href="contact.html">CONTACT</a></li>
+                    <li class="menu__item"><a class="menu__link" href="actus.html">ACTUS</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">BOUTIQUE CRėa</a></li>
                 </ul>
             </nav>
 
-            <h1 class="site-header_title">NOS PROJETS</h1>
-            <div class="site-header_subtitle">"EXPqbfdbfb fdfb fhh fhfbsfdbfb"</div>
+            <h1 class="page-header__title">NOS PROJETS</h1>
+            <div class="page-header__subtitle">"EXPqbfdbfb fdfb fhh fhfbsfdbfb"</div>
         </div>
     </header>
 
@@ -37,19 +41,25 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="">TOUT</a></li>
-                    <li><a href="">LOGOTYPE</a></li>
-                    <li><a href="">AFFICHAGE</a></li>
-                    <li><a href="">EDITION</a></li>
-                    <li><a href="">ILLUSTRATION</a></li>
-                    <li><a href="">IDENTITE</a></li>
-                    <li><a href="">WEB</a></li>
+                    <li><button onclick="trierCartes('tout');">TOUT</button></li>
+                    <li><button onclick="trierCartes('tag-logo');">LOGOTYPE</button></li>
+                    <li><button onclick="trierCartes('tag-affiche');">AFFICHAGE</button></li>
+                    <li><button onclick="trierCartes('tag-edition');">EDITION</button></li>
+                    <li><button onclick="trierCartes('tag-illustration');">ILLUSTRATION</button></li>
+                    <li><button onclick="trierCartes('tag-identite');">IDENTITE</button></li>
+                    <li><button onclick="trierCartes('tag-web');">WEB</button></li>
                 </ul>
             </nav>
 
             <div class="liste-de-cartes">
-
-                <div class="carte">
+               
+               <!-- 
+                     Pour indexer les cartes de projet avec les boutons de tri:
+                     
+                    Ajouter les classes : tag-logo | tag-affiche | tag-edition | tag-affiche |
+                -->
+                
+                <div class="carte tag-logo">
                     <img class="carte-img" src="Visuels/Logo annie diouf.png"/>
                     <!-- <img class="carte-img" src="Visuels/Carte RDV.jpg"  alt="" />
                 <img class="carte-img" src="Visuels/Stopp trottoir annie diouf.jpg" alt="" />
@@ -59,7 +69,7 @@
                     </div>
                 </div>
 
-                <div class="carte">
+                <div class="carte tag-logo">
                     <img class="carte-img" src="Visuels/Milan Bihlmann-logo.png" />
                     <div class="carte-description">
                         <p><strong>Milan Bihlmann - réalisateur &amp; aventurier</strong><br> Création logotype en collaboration avec Mr Bihlmann
@@ -69,7 +79,7 @@
                 </div>
 
 
-                <div class="carte">
+                <div class="carte tag-logo">
                     <img class="carte-img" src="Visuels/proximity-logo.png"/>
                     <div class="carte-description">
                         <p><strong>Agence de communication proximity</strong><br> Refonte logotype
@@ -87,7 +97,7 @@
                     </div>
                 </div>
 
-                <div class="carte">
+                <div class="carte tag-affiche">
                     <img class="carte-img" src="Visuels/Posters FE_cnrs.png" />
                     <!--<img class="carte-img" src="Visuels/Encart 13 X 4,5.png"  />
                     <img class="carte-img" src="Visuels/Banniere web fe.png" />
@@ -98,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="carte">
+                <div class="carte tag-affiche">
                     <img class="carte-img" src="Visuels/affiche-barbican.png" />
                     <div class="carte-description">
                         <p><strong>Bière Barbican</strong>
@@ -106,7 +116,7 @@
                     </div>
                 </div>
 
-                <div class="carte">
+                <div class="carte tag-logo">
                     <img class="carte-img" src="Visuels/logo-food 2 night.png"/>
                     <div class="carte-description">
                         <p><strong>Food to night</strong>
@@ -116,7 +126,7 @@
 
 
 
-                <div class="carte">
+                <div class="carte tag-logo">
                     <img class="carte-img" src="Visuels/Muammer logo.png"/>
                     <div class="carte-description">
                         <p><strong>Muammer Yilmaz aventurier, photographe et réalisateur</strong><br>Réalisation logotype pour utilisation de carte de visite <br> et site web <em><strong>www.muammer.fr</strong></em><br><strong>réalisation : </strong>2015</p>
@@ -124,7 +134,7 @@
                 </div>
 
 
-                <div class="carte">
+                <div class="carte tag-edition">
                     <img class="carte-img" src="Visuels/Plaquette Icar_2015.png"/>
                     <div class="carte-description">
                         <p><strong> FCS Campus Paris-Saclay</strong><br>Conception et réalisation plaquette "Icar" pour la 26e conférence <br>internationale de recherche sur l'Arabidopsis 21*29,7 cm recto*verso
@@ -140,21 +150,21 @@
                 </div>
 
 
-                <div class="carte">
+                <div class="carte tag-edition">
                     <img class="carte-img" src="Visuels/Plaquettes parcours.png"  />
                     <div class="carte-description">
                         <p><strong>Campus Paris-Saclay</strong><br>Exécution de 100 plaquettes de parcours professionnels <br> 21*29,7 cm recto*verso <br><strong>réalisation : </strong>2014</p>
                     </div>
                 </div>
 
-                <div class="carte">
+                <div class="carte tag-logo">
                     <img class="carte-img" src="Visuels/GRILL WOOD LOGO.png"  />
                     <div class="carte-description">
                         <p><strong>Grill Wood</strong><br>Conception et réalisation logotype<br> Restaurant de grillade, au Port du rhin<br><strong>réalisation : </strong>2013</p>
                     </div>
                 </div>
 
-                <div class="carte">
+                <div class="carte tag-affiche">
                     <img class="carte-img" src="Visuels/Affiche Handiversite .png"  />
                     <div class="carte-description">
                         <p><strong>Université Paris-Saclay "Colloque Handiversité"</strong>
@@ -172,7 +182,7 @@
 
 
 
-                <div class="carte">
+                <div class="carte tag-logo">
                     <img class="carte-img" src="Visuels/Lebelaki logotype.png"  />
                     <div class="carte-description">
                         <p><strong>Lébélaki Cosmétique</strong>
@@ -220,7 +230,7 @@
 
 
 
-                <div class="carte">
+                <div class="carte tag-affiche">
                     <img class="carte-img" src="Visuels/Affiche n°2 et si vous brevetiez.png" />
                     <div class="carte-description">
                         <p><strong>FCS Digitéo "Triangle de la physique"</strong><br> Conception et réalisation affiche<br>Biénnale internationale de Physique 42*59,4 cm<strong><br>réalisation : </strong>2009</p>
@@ -229,7 +239,7 @@
 
 
 
-                <div class="carte">
+                <div class="carte tag-affiche">
                     <img class="carte-img" src="Visuels/Affiche Ultra haute Intens..png" />
                     <div class="carte-description">
                         <p><strong>FCS Digitéo "Triangle de la physique"</strong><br> Conception et réalisation affiche<br>séminaire Ultra Haute Intensité 42*59,4 cm<strong><br>réalisation : </strong>2009</p>
@@ -249,7 +259,47 @@
 
 
         </div>
+<script>
+        function trierCartes(carteTag) {
+            console.log(carteTag + '<');
+            var cartes = document.getElementsByClassName("carte");
+            
+            for (var i=0; i < cartes.length;i++){
+                var laClass = cartes[i].className;
+                
+                if (!(carteTag === "tout")){ // si le lien cliqué n'est pas "tout"
+                    
+                
 
+                    if (! (laClass === "carte "+ carteTag)) { // si le tag ne correspond pas à la classe
+                        console.log(laClass + " ne correspond pas (" + carteTag + ") ");
+                        cartes[i].style.display = "none"; // ... on le masque...
+                     
+                     } else {
+                         
+                        console.log(laClass + " = (" + carteTag + ") ");
+                        cartes[i].style.display = "block"; // ... si oui on l'affiche...
+                         
+
+                    }
+                  } else { 
+                      
+                      // Le lien est cliqué est donc "tout"
+                     cartes[i].style.display = "block"; // ... si oui on affiche la carte...
+                      console.log(cartes[i].style.display + " sera Affiché ")
+                    
+                    
+                  }
+                
+            }
+            
+        }
+    
+        
+        
+        
+        
+        </script>
 
 
 
@@ -296,9 +346,9 @@
                 Droits réservés 2018 | Presse Kewee | Site conçu en collaboration avec
                 <a href="#">Jonathan NOEL</a>
             </div>
-            <div class="liensReseauxSociaux">
-                <a href="">LinkedIn</a>
-                <a href="">Facebook</a>
+            <div class="liste-reseaux-sociaux">
+                <a href="" class="liste-reseaux-sociaux__link"><i class="fab fa-facebook-f"></i></a>   
+                <a href="" class="liste-reseaux-sociaux__link"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>

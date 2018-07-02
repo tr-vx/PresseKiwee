@@ -1,79 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PresseKiwee | Accueil</title>
+    
+    <!--  Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 
 <body>
 
-    <header class="site-header">
+    <header class="page-header-large">
         <div class="container">
-            <img class="site-header_logo" src="images/logo.png" alt="logo">
+            <img class="page-header__logo" src="images/logo.png" alt="logo">
 
-            <nav class="site-header_nav">
+            <nav class="page-header__nav">
                 <!-- Menu Principal -->
-                <ul>
-                    <li><a href="index.html">ACCUEIL</a></li>
-                    <li><a href="services.html">NOS SERVICES</a></li>
-                    <li><a href="projets.html">PROJETS</a></li>
-                    <li><a href="studio.html">STUDIO</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="actus.html">ACTUS</a></li>
-                    <li><a href="">BOUTIQUE CRėa</a></li>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="index.html">ACCUEIL</a></li>
+                    <li class="menu__item"><a class="menu__link" href="services.html">NOS SERVICES</a></li>
+                    <li class="menu__item"><a class="menu__link" href="projets.html">PROJETS</a></li>
+                    <li class="menu__item"><a class="menu__link" href="studio.html">STUDIO</a></li>
+                    <li class="menu__item"><a class="menu__link" href="contact.html">CONTACT</a></li>
+                    <li class="menu__item"><a class="menu__link" href="actus.html">ACTUS</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">BOUTIQUE CRėa</a></li>
                 </ul>
             </nav>
         </div>
+        
+        <div class="test" style="padding:20px;position:fixed;top:40%;left:40%;color:darkslategray;border:3px solid green;background:white;z-index:99">
+
+            <label for="test">Changer la largeur du containeur (ex: 750px ou 50%):
+            <input type="text" id="test" style=""></label>
+            <button type="submit" onclick="changerContaineur()" style="padding:5px;">tester</button>
+        </div>
     </header>
+    <script>
+        var containerElts = document.getElementsByClassName('container');
+        
+        function changerContaineur() {
+            
+            var valeur = document.getElementById('test').value;
+            
+            for(var i=0; i<containerElts.length; i++){
+                
+                containerElts[i].style.width = valeur;
+            }
 
-    <section id="mission" class="bord-dessous"><!-- ligne de separation en dessous  -->
-        <div class="container bg-gris">
-            <div class="colonnes">
-                <!-- colonne gauche -->
-                <div class="col">
-                    <h2 class="text-vert">LE STUDIO</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur distinctio cupiditate exercitationem nemo harum facere labore blanditiis quibusdam debitis minus enim est doloribus modi possimus ratione incidunt atque, sed assumenda!</p>
-                    <p class="text-vert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, neque, officia! Expedita repudiandae, earum non similique numquam rerum nisi, quidem saepe hic illum laudantium nihil, itaque optio eaque maiores quas!</p>
-                </div>
-                <div class="col">
-                    <!-- colonne droite-->
-                    <h3>NOTRE MISSION</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores debitis id obcaecati odio qui labore voluptates iste ipsa fugit ratione ducimus illo, cumque, et officiis consequatur enim amet, delectus modi.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aut, voluptates praesentium vero laboriosam ullam molestiae aperiam non, eius, accusantium numquam repudiandae, asperiores officiis quas. Quam odit voluptate nobis repellat.</p>
-                </div>
+
+        }
+    </script>
+
+
+    <div class="container">
+        <div class="bg-gris block-text">
+            <!-- bloc de texte sur 2 colonnes -->
+            <!-- colonne gauche -->
+            <div class="block-text__col">
+                <h2 class="text-vert">LE STUDIO</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur distinctio cupiditate exercitationem nemo harum facere labore blanditiis quibusdam debitis minus enim est doloribus modi possimus ratione incidunt atque, sed assumenda!</p>
+                <p class="text-vert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, neque, officia! Expedita repudiandae, earum non similique numquam rerum nisi, quidem saepe hic illum laudantium nihil, itaque optio eaque maiores quas!</p>
+            </div>
+            <div class="block-text__col">
+                <!-- colonne droite-->
+                <h3>NOTRE MISSION</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores debitis id obcaecati odio qui labore voluptates iste ipsa fugit ratione ducimus illo, cumque, et officiis consequatur enim amet, delectus modi.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aut, voluptates praesentium vero laboriosam ullam molestiae aperiam non, eius, accusantium numquam repudiandae, asperiores officiis quas. Quam odit voluptate nobis repellat.</p>
             </div>
 
         </div>
-        <p style="clear:left">DECOUVREZ NOS SERVICES<br><span class="text-light">nos solutions </span><b>PRINT, IMPRESSION ET WEB DESIGN</b></p>
-    </section>
+    </div>
 
-    <section id="section2" class="bord-dessous"><!-- ligne de separation en dessous  -->
+    <div class="container accroche">
+        <p class="accroche__text">DECOUVREZ NOS SERVICES<br><span class="text-light">nos solutions </span><b>PRINT, IMPRESSION ET WEB DESIGN</b></p>
+    </div>
+
+
+
+    <div class="bord_tb">
         <div class="container">
-            <div class="colonnes">
-                <div class="col">
-                    <img src="images/image_service.png" alt="">
-                    <h4>CREATION PRINT</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi recusandae consectetur cupiditate dolor excepturi libero, nihil deserunt distinctio odio rerum impedit porro voluptatem, dicta iste odit vitae! Accusamus, molestiae!</p>
-                    <p class="text-vert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem quae beatae laborum repudiandae ratione. Quidem explicabo architecto praesentium repudiandae aspernatur. Perferendis ad maiores, impedit tenetur nulla itaque consequuntur minus.</p>
+            <div class="block-list-horizontal">
+                <div class="block-list-horizontal__item card-presentation">
+
+                    <img class="card-presentation__img" src="images/image_service.png" alt="">
+                    <h4 class="card-presentation__title">CREATION PRINT</h4>
+                    <p class="card-presentation__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi recusandae consectetur cupiditate dolor excepturi libero, nihil deserunt distinctio odio rerum impedit porro voluptatem, dicta iste odit vitae! Accusamus, molestiae!</p>
+                    <p class="card-presentation__text text-vert">Lorem ipsum dolor sit am tenetur nulla itaque consequuntur minus.</p>
                 </div>
-                <div class="col">
-                    <img src="images/image_service.png" alt="">
-                    <h4>IMPRESSION</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi recusandae consectetur cupiditate dolor excepturi libero, nihil deserunt distinctio odio rerum impedit porro voluptatem, dicta iste odit vitae! Accusamus, molestiae!</p>
-                    <p class="text-vert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem quae beatae laborum repudiandae ratione. Quidem explicabo architecto praesentium repudiandae aspernatur. Perferendis ad maiores, impedit tenetur nulla itaque consequuntur minus.</p>
+
+                <div class="block-list-horizontal__item card-presentation">
+
+                    <img class="card-presentation__img" src="images/image_service.png" alt="">
+                    <h4 class="card-presentation__title">IMPRESSION</h4>
+                    <p class="card-presentation__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi recusandae consectetur cupiditate dolor excepturi libero, nihil deserunt distinctio odio rerum Accusamus, molestiae!</p>
+                    <p class="card-presentation__text text-vert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem quae beatae labtur nulla itaque consequuntur minus.</p>
                 </div>
-                <div class="col">
-                    <img src="images/image_service.png" alt="">
-                    <h4>WEB DESIGN</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi recusandae consectetur cupiditate dolor excepturi libero, nihil deserunt distinctio odio rerum impedit porro voluptatem, dicta iste odit vitae! Accusamus, molestiae!</p>
-                    <p class="text-vert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem quae beatae laborum repudiandae ratione. Quidem explicabo architecto praesentium repudiandae aspernatur. Perferendis ad maiores, impedit tenetur nulla itaque consequuntur minus.</p>
+
+                <div class="block-list-horizontal__item card-presentation">
+
+                    <img class="card-presentation__img" src="images/image_service.png" alt="">
+                    <h4 class="card-presentation__title">WEB DESIGN</h4>
+                    <p class="card-presentation__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi recusandae consectetur cupiditate dolor excepturi libero, porro voluptatem, dicta iste odit vitae! Accusamus, molestiae!</p>
+                    <p class="card-presentation__text text-vert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem quae beatae laborum repudiandae ratione itecto,quuntur.</p>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
     <footer>
         <div class="container">
             <div class="colonnes">
@@ -112,13 +149,14 @@
                 Droits réservés 2018 | Presse Kewee | Site conçu en collaboration avec
                 <a href="#">Jonathan NOEL</a>
             </div>
-            <div class="liensReseauxSociaux">
-                <a href="">LinkedIn</a>
-                <a href="">Facebook</a>
+            <div class="liste-reseaux-sociaux">
+                <a href="" class="liste-reseaux-sociaux__link"><i class="fab fa-facebook-f"></i></a>   
+                <a href="" class="liste-reseaux-sociaux__link"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>
 
 
 </body>
+
 </html>
